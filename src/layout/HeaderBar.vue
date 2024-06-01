@@ -49,7 +49,7 @@ window.addEventListener('scroll', () => {
     color: black;
     display: flex;
     gap: 20px;
-    height: 40px;
+    height: var(--contact-bar-height);
   }
 
   &__bar {
@@ -65,7 +65,9 @@ window.addEventListener('scroll', () => {
     transition: background-color 500ms ease;
 
     &--sticked {
-      background-color: #e05928;
+      // background-color: #e05928;
+      background-color: #000000de;
+      border-bottom: 1px solid white;
     }
   }
 
@@ -76,8 +78,12 @@ window.addEventListener('scroll', () => {
   }
 
   &__menu {
+    align-items: center;
     display: flex;
     gap: 10px;
+    justify-content: end;
+    margin-left: 16px;
+    width: 100%;
   }
 
   &__menu-item {

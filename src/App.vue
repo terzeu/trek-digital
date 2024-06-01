@@ -18,6 +18,5 @@ import HeaderBar from './layout/HeaderBar.vue'
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
 }
 </style>

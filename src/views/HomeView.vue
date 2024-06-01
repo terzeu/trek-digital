@@ -18,8 +18,8 @@ const phoneMask = reactive({
 <template>
   <section class="home section">
     <div class="home__presentation">
-      <p class="home__question">Quer crescer o seu negócio?</p>
-      <h2 class="home__maximize">Maximize seus resultados com a Trek Digital!</h2>
+      <h2 class="home__title">Quer crescer o seu negócio?</h2>
+      <p class="home__description">Maximize seus resultados com a Trek Digital!</p>
       <p class="home__description">
         Nossa equipe de especialistas em Google Ads e Meta Ads utiliza análise de dados para
         impulsionar sua marca. Comece a aumentar seus agendamentos hoje mesmo.
@@ -51,23 +51,19 @@ const phoneMask = reactive({
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+  min-height: calc(100vh - var(--header-height) - var(--contact-bar-height));
 
   &__presentation {
-    width: 50%;
-    min-width: 300px;
+    min-width: 50%;
+    width: 390px;
   }
 
   &__lead {
-    width: 50%;
     max-width: 390px;
+    width: 100%;
   }
 
-  &__question {
-    font-size: 16px;
-    margin-bottom: 4px;
-  }
-
-  &__maximize {
+  &__title {
     font-size: 28px;
     margin-bottom: 12px;
   }
