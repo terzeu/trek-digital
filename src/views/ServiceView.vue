@@ -59,29 +59,40 @@ const services = [
           <component :is="item.image" />
         </ServiceCard>
       </div>
+      <button class="button button--primary services__action">Solicitar orçamento</button>
     </div>
-    <button>Solicitar orçamento</button>
   </section>
 </template>
 <style lang="scss" scoped>
 .services {
-  background-color: var(--vt-c-black-soft);
+  background-color: white;
+  color: black;
   text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__action {
+    margin-top: 24px;
+    width: 100%;
+  }
 
   &__title {
     margin-bottom: 16px;
   }
 
   &__content {
+    max-width: 600px;
   }
 
   &__content-title {
+    margin-bottom: 16px;
   }
 
   &__cards {
     display: flex;
     gap: 10px;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }
 }

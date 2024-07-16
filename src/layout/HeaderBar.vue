@@ -6,7 +6,7 @@ import EmailIcon from '@/components/icons/EmailIcon.vue'
 const isSticked = ref<boolean>(false)
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 35) {
+  if (window.scrollY > 40) {
     isSticked.value = true
   } else {
     isSticked.value = false
@@ -26,7 +26,9 @@ window.addEventListener('scroll', () => {
     </a>
   </div>
   <nav :class="['header__bar', { 'header__bar--sticked': isSticked }]">
-    <div class="header__logo"></div>
+    <div class="header__logo">
+      <img src="../assets/imgs/logo-white-2.png" alt="" width="100" />
+    </div>
     <div class="header__menu">
       <a class="header__menu-item" href="#">Início</a>
       <a class="header__menu-item" href="#services">Nossos Serviços</a>
@@ -35,7 +37,9 @@ window.addEventListener('scroll', () => {
   </nav>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '../assets/_variables';
+
 .header {
   &__bar,
   &__contacts {
@@ -49,7 +53,7 @@ window.addEventListener('scroll', () => {
     color: black;
     display: flex;
     gap: 20px;
-    height: var(--contact-bar-height);
+    height: $contact-bar-height;
   }
 
   &__bar {
@@ -58,23 +62,21 @@ window.addEventListener('scroll', () => {
     color: white;
     display: flex;
     justify-content: space-between;
-    height: var(--header-height);
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
+    height: $header-height;
+    position: absolute;
+    top: $contact-bar-height;
     transition: background-color 500ms ease;
 
     &--sticked {
-      // background-color: #e05928;
-      background-color: #000000de;
+      background-color: rgb($secondary, 0.8);
       border-bottom: 1px solid white;
+      position: -webkit-sticky; /* Safari */
+      position: fixed;
+      top: 0;
     }
   }
 
   &__logo {
-    background-color: blue;
-    height: 50px;
-    width: 50px;
   }
 
   &__menu {

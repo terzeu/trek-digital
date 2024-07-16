@@ -27,7 +27,7 @@ const phoneMask = reactive({
       <p class="home__description">
         Entre em contato e descubra como nossas estratégias podem ajudá-lo a atingir seus objetivos!
       </p>
-      <button class="home__more-info">Quero mais informações</button>
+      <button class="button button--primary home__more-info">Quero mais informações</button>
     </div>
     <div class="home__lead">
       <form class="home__form" action="">
@@ -40,21 +40,31 @@ const phoneMask = reactive({
         />
         <InputText placeholder="Nome da empresa" :required="false" class="home__input" />
         <InputText placeholder="Site da empresa" :required="false" class="home__input" />
-        <button type="submit">Quero mais informações!</button>
+        <button type="submit" class="button button--primary home__more-info">
+          Quero mais informações!
+        </button>
       </form>
     </div>
   </section>
 </template>
 <style lang="scss" scoped>
+@import '../assets/_variables';
+
 .home {
+  align-items: center;
+  background: url(../assets/mountains.jpg);
+  background-size: cover;
+  box-shadow: inset 0 0 0 50vw #000000ad;
   display: flex;
   gap: 16px;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  min-height: calc(100vh - var(--header-height) - var(--contact-bar-height));
+  min-height: calc(100vh - $contact-bar-height);
+  padding: $header-height 16px;
 
   &__presentation {
-    min-width: 50%;
+    display: flex;
+    flex-direction: column;
     width: 390px;
   }
 
@@ -65,7 +75,7 @@ const phoneMask = reactive({
 
   &__title {
     font-size: 28px;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
   }
 
   &__description {
@@ -74,6 +84,7 @@ const phoneMask = reactive({
 
   &__more-info {
     margin-top: 24px;
+    width: 100%;
   }
 
   &__form {

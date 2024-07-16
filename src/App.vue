@@ -13,7 +13,7 @@ import HeaderBar from './layout/HeaderBar.vue'
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .page {
   display: flex;
   flex-direction: column;

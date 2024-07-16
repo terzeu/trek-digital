@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   title: string
   description: string
 }>()
@@ -16,7 +16,7 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .card {
   align-items: center;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
